@@ -1,0 +1,24 @@
+
+@media (max-width:299px) {
+    #confirmBox{
+        left: 7%;
+    }
+}
+
+@media (min-width:300px) and (max-width:350px) {
+    #confirmBox{
+        left: 13%;
+    }
+}
+
+@media (min-width:351px) and (max-width:480px) {
+    #confirmBox{
+        left: 20%;
+    }
+}
+
+@media (min-width:481px) {
+    #confirmBox{
+        left:27%
+    }
+}
