@@ -28,7 +28,7 @@ export default function Home() {
       </p>
       <div className="d-flex mx-4 my-4 text-primary justify-content-between flex-wrap align-items-center">
         <h3>Start by creating your first ToDo-List</h3>
-        <a href="/list">
+        <a href="#/list">
           <button type="button" className="btn btn-primary ">
             List <i className="fa-solid fa-arrow-right"></i>
           </button>

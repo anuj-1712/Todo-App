@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import Home from "./components/Home";
 import List from "./components/List";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 function App() {
   const [alert, setAlert] = useState(null);
 
@@ -20,18 +19,16 @@ function App() {
   };
   return (
     <>
-      <Router>
         <Navbar />
-        <Switch>
-          <Route path="/list">
-            <Alert alert={alert} />
-            <List showAlert={showAlert} />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/list" element={
+            <React.Fragment>
+              <Alert alert={alert} />
+              <List showAlert={showAlert} />
+            </React.Fragment>
+          } />
+        </Routes>
     </>
   );
 }

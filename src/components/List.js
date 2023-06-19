@@ -37,8 +37,10 @@ export default function Diary(props) {
   };
 
   // creating a function to deletenotes in a todo list
-  const deleteNote = () => {
-    document.getElementById("confirmBox").style.display = "flex"
+  const deleteNote = (id) => {
+    setTodos((currentTodos)=>{
+      return currentTodos.filter(todo => todo.id!==id)
+    })
   };
 
   // creating a function to clear all notes at once

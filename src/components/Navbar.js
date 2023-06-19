@@ -22,12 +22,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active text-light fs-5 me-2" aria-current="page" href="/">
+              <a className="nav-link active text-light fs-5 me-2" aria-current="page" href="/#">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fs-5 me-2" href="/list">
+              <a className="nav-link text-light fs-5 me-2" href="#/list">
                 List
               </a>
             </li>
