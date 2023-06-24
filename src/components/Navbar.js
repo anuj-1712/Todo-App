@@ -4,10 +4,10 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <a className="navbar-brand text-light me-4 fs-2" href="/">
+        <h1 className="navbar-brand text-light me-4 fs-2">
           WebTick 
           <i className="fa-solid fa-square-check ms-2"></i>
-        </a>
+        </h1>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active text-light fs-5 me-2" aria-current="page" href="/#">
+              <a className="nav-link active text-light fs-5 me-2" aria-current="page" href="#/">
                 Home
               </a>
             </li>

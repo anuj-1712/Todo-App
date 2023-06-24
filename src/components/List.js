@@ -74,6 +74,7 @@ export default function Diary(props) {
             onChange={(e) => {
               setNote(e.target.value);
             }}
+            style={{boxShadow:"-4px 4px 4px #C4DFDF"}}
             className="form-control mx-4 border-primary"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
@@ -81,47 +82,47 @@ export default function Diary(props) {
           />
           <button
             type="button"
-            className="btn btn-danger mx-2"
+            className="btn btn-success mx-2" style={{boxShadow:"-3px 3px 8px #A0C49D"}}
             onClick={addNotes}
             disabled={disable}
           >
-            Add
+            <i className="fa-sharp fa-solid fa-plus"></i>
           </button>
         </div>
         <Confirm confirmCancel={confirmCancel} confirmDelete={confirmDelete} />
-        <div
+          {todos.map((todo) => {
+            return (
+              <div
           className="container-xxl border border-light mx-auto mb-4"
           id="container"
+          key={todo.id}
           style={{
             maxWidth: "1850px",
             width: "96%",
             minWidth: "200px",
-            marginTop: "2.5rem",
+            marginTop: "2rem",
             backgroundColor: "#30A2FF",
             boxShadow:"-4px 4px 8px #213555",
             display: todos.length === 0 ? "none" : "block",
           }}
         >
-          {todos.map((todo) => {
-            return (
               <div
                 className="d-flex justify-content-between flex-wrap align-items-center"
-                key={todo.id}
               >
                 <Notes note={note} title={todo.title} />
                 <button
                   onClick={()=>deleteNote(todo.id)}
                   type="button"
                   className="btn btn-danger my-2 "
-                  style={{ minHeight: "30px", maxHeight: "40px" }}
+                  style={{ minHeight: "30px", maxHeight: "40px" , boxShadow:"2px 3px 8px black"}}
                   disabled={disable}
                 >
-                  Delete
+                  <i className="fa-sharp fa-solid fa-trash"></i>
                 </button>
+              </div>
               </div>
             );
           })}
-        </div>
         <button
           type="button"
           className="btn btn-danger "
@@ -130,6 +131,7 @@ export default function Diary(props) {
           style={{
             display: todos.length <= 1 ? "none" : "block",
             marginLeft: "2%",
+            boxShadow:"2px 3px 8px black"
           }}
         >
           Clear All

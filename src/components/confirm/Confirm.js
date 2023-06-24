@@ -17,6 +17,7 @@ export default function Confirm(props) {
         maxHeight:"180px",
         position: "absolute",
         boxShadow: "3px 3px 15px indianred",
+        zIndex:1
       }}
     >
       <h3 className="fs-4 text-light mx-4">
